@@ -1,64 +1,21 @@
-@import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
 body {
   margin: 0;
 }
 
-h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  letter-spacing: 2px;
-  font-size: 48px;
-}
-
-p {
-  font-family: 'Lato', sans-serif;
-  letter-spacing: 1px;
-  font-size: 14px;
-  color: #333333;
-}
-
-.header {
-  position: relative;
-  text-align: center;
-  background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
-  color: white;
-  padding-top: 600px;
-}
-
-
-.inner-header {
-  height: 65vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.flex {
-  /* Flexbox for containers */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 .waves {
-  position: relative;
+  position: absolute;   /* added this line */
   width: 100%;
-  height: 10vh;
-  margin-bottom: -7px;
+  height: 26vh;
+  z-index: 1;
+  bottom: 0;
   /* Fix for safari gap */
   min-height: 100px;
-  max-height: 150px;
-}
+ ; }
 
-.content {
-  position: relative;
-  height: 20vh;
-  text-align: center;
-  background-color: white;
-}
 
+ 
 /* Animation */
 
 .parallax > use {
@@ -68,21 +25,28 @@ p {
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
+  fill: darkblue;
+
 }
 
 .parallax > use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
+  fill: lightblue;
+
 }
 
 .parallax > use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
+  fill: lightblue;
+
 }
 
 .parallax > use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
+  fill: lightblue;
 }
 
 @keyframes move-forever {
@@ -96,18 +60,170 @@ p {
 }
 
 /* Shrinking for mobile */
+ 
 
-@media (max-width: 768px) {
-  .waves {
-    height: 40px;
-    min-height: 40px;
+@keyframes did-finish {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
   }
 
-  .content {
-    height: 30vh;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#water {
+animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite, did-finish 1s ease-out 25s forwards;
+}
+
+
+@keyframes dead-fish-animation {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+
+
+.boat {
+  position: absolute;
+  bottom: 0;
+  height: 80%;
+  left: 30%; /* Adjust the left position as needed to center the boat */
+  transform: translateX(-50%); /* Center the boat horizontally */
+  z-index: 2; /* Make sure the boat is above the waves */
+}
+
+
+@keyframes boat-animation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the vertical movement as needed */
+  }
+}
+
+.boat {
+  /* Add the animation to the boat element */
+  animation: boat-animation 5s ease-in-out infinite;
+}
+
+body {
+  margin: 0;
+}
+
+
+.waves {
+  position: absolute;   /* added this line */
+  width: 100%;
+  height: 26vh;
+  z-index: 1;
+  bottom: 0;
+  /* Fix for safari gap */
+  min-height: 100px;
+ ; }
+
+
+ 
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+  fill: darkblue;
+
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+  fill: lightblue;
+
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+  fill: lightblue;
+
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+  fill: lightblue;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
   }
 
-  h1 {
-    font-size: 24px;
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* Shrinking for mobile */
+ 
+
+@keyframes did-finish {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#water {
+animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite, did-finish 1s ease-out 25s forwards;
+}
+
+
+@keyframes dead-fish-animation {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+
+ 
+.boat {
+  position: absolute;
+  bottom: 0;
+  height: 80%;
+  left: 0%; /* Adjust the left position as needed to center the boat */
+  transform: translateX(-50%); /* Center the boat horizontally */
+  z-index: 2; /* Make sure the boat is above the waves */
+}
+
+
+@keyframes boat-animation {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px); /* adjust as necessary for the desired bobbing effect */
   }
 }

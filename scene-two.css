@@ -3,9 +3,16 @@
     padding: 0;
 }
 
+
+
+
+
+
 body {
-    background-image: url('img/background.jpg');
-    position: relative;
+    background-image: url('img/e.png');
+    background-size: cover;  /* Make the image cover the entire viewport */
+    background-repeat: no-repeat;  /* Do not repeat the background image */
+    background-position: center center;  /* Center the image in the viewport */
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -128,37 +135,10 @@ html, body {
     animation-duration: 7s;
 }
 
-/* Waves */
-.wave, .ocean-bottom {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 10%;
-    height: 20%;
-}
+ 
 
-.ocean-bottom {
-    background: rgba(103,228,255,255);
-    bottom: 0;
-    z-index: 1;
-}
 
-.wave {
-    background-image: url('https://gist.githubusercontent.com/geekboots-team/3fadc92db287cc40139e2346786a2ae1/raw/8673dcad52e59ca1e8489c7d481e8ee7ad217d35/wave.svg');
-    background-position: 0 0;
-    background-repeat: repeat-x;
-    animation: waveMove 12.5s infinite ease-in-out alternate;
-}
-
-@keyframes waveMove {
-    0% {
-        background-position-x: 0%;
-    }
-    100% {
-        background-position-x: 100%;
-    }
-}
-
+ 
 /* Sun */
 .sun {
     position: absolute;
@@ -206,3 +186,72 @@ html, body {
             0 0 40px 100px #FFDE0010;
     }
 }
+
+ 
+.dr-on-boat {
+    position: absolute;
+    bottom: 17%; /* This will position the sad image at the same vertical position as the raft */
+    right: 60%; /* Same horizontal position as the raft */
+    height: 45%; /* Adjust this value if you want to change the size of the sad image */
+    z-index: 3; /* This will ensure the sad image appears on top of the raft */
+    transform: translateY(-50%); /* Adjust vertically based on the height of the sad image */
+    transform: scaleX(-1); /* invert the image horizontally */
+  }
+  
+  
+ 
+  .raft {
+    position: absolute;
+    bottom: 7%; /* adjust as necessary for vertical positioning */
+    right: 5%; /* position it on the far right side */
+    height: 20%; /* adjust as necessary to size the raft */
+    z-index: 2; /* ensure it's above the waves but below other elements */
+    animation: bobbing 3s infinite ease-in-out; /* add the bobbing animation */
+}
+
+.sad-on-raft {
+    position: absolute;
+    bottom: 18%; /* This will position the sad image at the same vertical position as the raft */
+    right: 5%; /* Same horizontal position as the raft */
+    height: 25%; /* Adjust this value if you want to change the size of the sad image */
+    z-index: 3; /* This will ensure the sad image appears on top of the raft */
+    transform: translateY(-50%); /* Adjust vertically based on the height of the sad image */
+}
+.sad-on-raft {
+    /* ... existing styles ... */
+    animation: bobbing 3s infinite ease-in-out;
+}
+
+
+@keyframes bobbing {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* adjust as necessary for the desired bobbing effect */
+    }
+}
+
+  
+ 
+
+.dr-speech-bubble {
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    width: 50px;
+    height: auto;
+    z-index: 1;
+}
+
+.sad-speech-bubble {
+    position: absolute;
+    bottom: 34%; /* This will position the sad image at the same vertical position as the raft */
+    right: 6%; /* Same horizontal position as the raft */
+    height: 45%; /* Adjust this value if you want to change the size of the sad image */
+    z-index: 3; /* This will ensure the sad image appears on top of the raft */
+    transform: translateY(-50%); /* Adjust vertically based on the height of the sad image */
+    transform: scaleX(-1); /* invert the image horizontally */
+
+}
+
