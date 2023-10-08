@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="audio" controls>
+        <source src="audio/bubble-sound.wav" type="audio/wav">
+    </audio>
+    <canvas id="canvas"></canvas>
+    <script src="bubbles.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById("audio");
+            setTimeout(function() {
+                audio.play();
+            }, 5000); // Delay audio playback for 5 seconds (5000 milliseconds)
+        });
+    </script>
+</body>
+</html>
