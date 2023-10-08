@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="scene-two.css">
+    <link rel="stylesheet" href="Component/water-scene.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Wave Animation</title>
+</head>
+
+<body>
+    <!-- Bubbles -->
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
+
+    <!-- Clouds -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+
+    <div class="header">
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+
+            <div class="dead-fish"></div>
+        </div>
+    </div>
+
+    <!-- Factories -->
+    <div class="factory factory1"></div>
+    <div class="factory factory2"></div>
+
+    <!-- Smoke -->
+    <div class="smoke smoke1"></div>
+    <div class="smoke smoke2"></div>
+
+    <img src="img/boat.png" alt="Boat" class="boat">
+    <img src="img/Dr.png" alt="Dr" class="dr-on-boat">
+    <img src="img/speech.png" alt="Speech Bubble" class="dr-speech-bubble"> <!-- New line added -->
+
+    <!-- sun -->
+    <div class="sun"></div>
+
+    <img src="img/raft.png" alt="Raft" class="raft">
+    <img src="img/sad.png" alt="Sad" class="sad-on-raft">
+    <img src="img/speech.png" alt="Speech Bubble" class="sad-speech-bubble"> <!-- New line added -->
+</body>
+</html>
