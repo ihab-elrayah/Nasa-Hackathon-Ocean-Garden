@@ -1,0 +1,37 @@
+
+body {
+    cursor: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../images/floor.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+    cursor: url('../images/swimmer.gif'), auto; /* This sets the diver gif as the cursor */
+}
+
+.swimmer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px; /* Adjust these dimensions based on the actual size of your GIF */
+    height: 200px;
+    background-image: url('../images/swimmer1.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%); /* This will center the div both vertically and horizontally */
+}
+
+#cursorGif {
+    pointer-events: none; /* Ensures the gif doesn't interfere with any clicks or hover events */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+.fish {
+    position: absolute;
+    max-width: 150px; /* you can adjust this based on your preferences */
+    transition: all 0.5s;
+}
