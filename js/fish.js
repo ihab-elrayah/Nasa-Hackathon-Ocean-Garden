@@ -35,3 +35,22 @@ function moveFishes() {
 }
 
 moveFishes(); // Start the movement
+
+function displayPhytoplankton() {
+    const numberOfPhytoplankton = 100;  // adjust the number as you see fit
+
+    for (let i = 0; i < numberOfPhytoplankton; i++) {
+        const phytoplankton = document.createElement('img');
+        phytoplankton.src = 'images/phytoplankton.png';  // Adjust to your path and filename if needed
+        phytoplankton.classList.add('phytoplankton');
+
+        // Random horizontal position along the width of the window:
+        phytoplankton.style.left = Math.random() * (window.innerWidth - phytoplankton.width) + 'px';
+
+        // Append the phytoplankton to the body:
+        document.body.appendChild(phytoplankton);
+    }
+}
+
+displayPhytoplankton();  // Display the phytoplankton on page load
+

@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 body {
     cursor: none;
     margin: 0;
@@ -41,4 +34,66 @@ body {
     position: absolute;
     max-width: 150px; /* you can adjust this based on your preferences */
     transition: all 0.5s;
+}
+
+.phytoplankton {
+    position: absolute;
+    width: 150px;  /* adjust size as needed*/
+    z-index: 0;  /* ensures they are beneath the fish and swimmer*/
+    bottom: 50px; /* Adjust this value to control how far above the bottom you want it */
+    right: 30%; /* Position at the middle horizontally */
+    transform: translateX(50%); /* This ensures it's middle right, not center. Adjust the percentage for fine-tuning. */
+    height: auto; /* Retain the original height of the image */
+    z-index: 2;
+
+}
+
+.show-text-button:hover {
+    background-color: #0056b3;
+}
+.bubble-hidden {
+    display: none;
+}
+
+.bubble-visible {
+    display: block;
+}
+
+#infoBox {
+    display: none;
+    /* other styles you might want to apply for aesthetics */
+    position: fixed;
+    bottom: 50px; /* Adjust this value to control how far above the bottom you want it */
+    right: 30%; /* Position at the middle horizontally */
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    width: 250px;
+    z-index: 1000;  /* to make sure it appears on top of other content */
+}
+#displayTextButtonArctic {
+    position: absolute;
+    bottom: 30px; 
+    right: 30%; 
+    transform: translateX(50%); 
+    padding: 10px 10px;  
+    background-color: #007BFF; 
+    border: none;        
+    color: white;       
+    border-radius: 5px;  
+    font-size: 1em;    
+    cursor: pointer;     
+    z-index: 1;  /* Set z-index lower than the phytoplankton */
+    opacity: 0.3; /* Starting opacity, making it somewhat transparent */
+    animation: flashEffect 1s infinite; /* Flashing animation */
+}
+
+@keyframes flashEffect {
+    0%, 100% {
+        opacity: 0.3; /* Start and end at more transparent state */
+    }
+    50% {
+        opacity: 1; /* Fully visible in the middle */
+    }
 }
