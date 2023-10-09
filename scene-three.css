@@ -1,0 +1,1134 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+    
+   
+    
+    @keyframes driftCloud {
+    0% {
+    transform: translateX(5%);
+    }
+    100% {
+    transform: translateX(-90%);
+    }
+    }
+    
+    
+    @keyframes fadeInOut {
+    0%, 100% {
+    opacity: 0;
+    }
+    10%, 90% {
+    opacity: 1;
+    }
+    }
+    
+    
+    .cloud {
+    position: absolute;
+    background-image: url('img/clouds.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: driftCloud 35s linear infinite, fadeInOut 35s linear infinite;
+    }
+    
+    
+    .cloud1 {
+    left: 10%;
+    top: 1%;
+    width: 300px;
+    height: 300px;
+    animation-delay: 0s;
+    }
+    
+    
+    .cloud2 {
+    left: 60%;
+    top: 2%;
+    width: 300px;
+    height: 300px;
+    animation-delay: 0s;
+    }
+    
+    
+    .cloud3 {
+    left: 90%;
+    top: 2%;
+    width: 300px;
+    height: 300px;
+    animation-delay: 0s;
+    }
+    
+    
+    .cloud4 {
+    left: 40%;
+    top: 2%;
+    width: 300px;
+    height: 300px;
+    animation-delay: 0s;
+    }
+    
+    
+    /* Bubbles */
+    .bubble {
+    position: absolute;
+    bottom: 10%; /* Setting starting position at the bottom of the ocean */
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: riseBubble 5s infinite ease-in;
+    z-index: 100;
+    }
+    
+    
+    @keyframes riseBubble {
+    0% {
+    transform: translateY(0);
+    opacity: 1;
+    }
+    50% {
+    opacity: 1;
+    }
+    100% {
+    transform: translateY(-15vh);
+    opacity: 0;
+    }
+    }
+    
+    
+    .bubble1 {
+    left: 20%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 4s;
+    }
+    
+    
+    .bubble2 {
+    left: 40%;
+    width: 15px;
+    height: 15px;
+    animation-duration: 6s;
+    }
+    
+    
+    .bubble3 {
+    left: 60%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 5s;
+    }
+    
+    
+    .bubble4 {
+    left: 80%;
+    width: 18px;
+    height: 18px;
+    animation-duration: 7s;
+    }
+    
+    
+    
+    
+    
+    
+    /* Sun */
+    .sun {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    width: 200px;
+    height: 200px;
+    background-color: #FFDE00;
+    border-radius: 50%;
+    box-shadow:
+    0 0 0 20px #FFDE0080,
+    0 0 0 40px #FFDE0040,
+    0 0 0 60px #FFDE0020,
+    0 0 0 80px #FFDE0010,
+    0 0 0 100px #FFDE0000,
+    0 0 40px 100px #FFDE0010;
+    animation:
+    sunrise 2s infinite linear forwards,
+    rays 2s 2s infinite linear;
+    }
+    
+    
+    @keyframes sunrise {
+    0% {
+    box-shadow: none;
+    }
+    }
+    
+    
+    @keyframes rays {
+    0% {
+    box-shadow:
+    0 0 0 0 #FFDE0080,
+    0 0 0 20px #FFDE0080,
+    0 0 0 40px #FFDE0040,
+    0 0 0 60px #FFDE0020,
+    0 0 0 80px #FFDE0010,
+    0 0 40px 100px #FFDE0010;
+    }
+    100% {
+    box-shadow:
+    0 0 0 20px #FFDE0080,
+    0 0 0 40px #FFDE0040,
+    0 0 0 60px #FFDE0020,
+    0 0 0 80px #FFDE0010,
+    0 0 0 100px #FFDE0000,
+    0 0 40px 100px #FFDE0010;
+    }
+    }
+    
+    
+    .dr-on-boat {
+    position: absolute;
+    bottom: 17%;
+    right: 60%;
+    height: 45%;
+    z-index: 3;
+    transform: translateY(-50%);
+    transform: scaleX(-1);
+    }
+    .raft {
+    position: absolute;
+    bottom: 7%;
+    right: 5%;
+    height: 20%;
+    z-index: 2;
+    animation: bobbing 3s infinite ease-in-out;
+    }
+    
+    
+    .sad-on-raft {
+    position: absolute;
+    bottom: 18%;
+    right: 5%;
+    height: 25%;
+    z-index: 3;
+    transform: translateY(-50%);
+    }
+    .sad-on-raft {
+    /* ... existing styles ... */
+    animation: bobbing 3s infinite ease-in-out;
+    }
+    
+    
+    
+    
+    @keyframes bobbing {
+    0%, 100% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-10px);
+    }
+    }
+    
+    
+    
+    
+    .dr-speech-bubble {
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    width: 50px;
+    height: auto;
+    z-index: 1;
+    }
+    
+    
+    .sad-speech-bubble {
+    position: absolute;
+    bottom: 34%;
+    right: 6%;
+    height: 45%;
+    z-index: 3;
+    transform: translateY(-50%);
+    transform: scaleX(-1);
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    body, html {
+    min-height: 100%;
+    height: 100%;
+    }
+    
+    
+    html {
+    background: #a5e1dd;
+    }
+    
+    
+    
+    
+    .boat2 {
+    position: fixed;
+    left: 10%;
+    animation: boat 8s linear alternate infinite;
+    animation-delay: -.33s;
+    }
+    
+    
+    
+    
+    
+    
+    .boat {
+    position: fixed;
+    left: 20%;
+    animation: boat 8s linear alternate infinite;
+    animation-delay: -.33s;
+    }
+    
+    
+    .hull {
+    position: relative;
+    height: 0em;
+    width: 14em;
+    border-bottom: 5em solid #674333;
+    background: #674333;
+    border-radius: 0 0 28em 28em;
+    }
+    
+    
+    .hull::after {
+    content: 'SS FRISK';
+    display: block;
+    color: #f2edea;
+    padding-left: 1em;
+    padding-top: 1em;
+    font-size: 10px;
+    opacity: .5;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    }
+    
+    
+    .mast {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -.25em;
+    background: #674333;
+    width: .5em;
+    height: 15em;
+    z-index: -1;
+    }
+    
+    
+    .sail {
+    top: 2em;
+    margin-left: .5em;
+    width: 0;
+    height: 0;
+    border-bottom: 7em solid #f2edea;
+    border-right: 4em solid transparent;
+    position: absolute;
+    }
+    
+    
+    .sail::after {
+    margin-left: .75em;
+    width: 0;
+    height: 0;
+    border-bottom: 6em solid #f2edea;
+    border-left: 4em solid transparent;
+    content: '';
+    display: block;
+    position: absolute;
+    left: -5.25em;
+    top: 1.1em;
+    }
+    
+    
+    .flag {
+    position: absolute;
+    width: 3em;
+    height: 2em;
+    background: #ff90aa;
+    top: 0;
+    right: .5em;
+    }
+    
+    
+    .skull {
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    top: 13%;
+    }
+    
+    
+    
+    
+    .eye:first-child {
+    right: 50%;
+    margin-right: 2px;
+    }
+    
+    
+    .eye:last-child {
+    left: 50%;
+    margin-left: 2px;
+    }
+    
+    
+    .teeth {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    right: -1px;
+    }
+    
+    
+    .tooth {
+    background: #fff;
+    height: 6px;
+    width: 3px;
+    margin: 0 1px 0 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    }
+    
+    
+    .waves {
+    height: 33.3%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    }
+    
+    
+    .waves-back {
+    height: 36%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    }
+    
+    
+    .wave-back {
+    position: absolute;
+    bottom: 0;
+    width: 85%;
+    height: 50%;
+    background: #108291;
+    border-radius: 100% 100% 0 0;
+    animation: wave 30s linear infinite;
+    }
+    
+    
+    .wave {
+    position: absolute;
+    bottom: 0;
+    width: 85%;
+    height: 50%;
+    background: #0cabaa;
+    border-radius: 100% 100% 0 0;
+    animation: wave 25s linear infinite;
+    }
+    
+    
+    .wave:nth-child(1),
+    .wave-back:nth-child(1) {
+    animation-delay: 0s;
+    }
+    
+    
+    
+    
+    .wave:nth-child(2),
+    .wave-back:nth-child(2) {
+    animation-delay: -6.25s;
+    }
+    
+    
+    .wave:nth-child(3),
+    .wave-back:nth-child(3) {
+    animation-delay: -12.5s;
+    }
+    
+    
+    .wave:nth-child(4),
+    .wave-back:nth-child(4) {
+    animation-delay: -18.75s;
+    }
+    
+    
+    .wave:nth-child(5),
+    .wave-back:nth-child(5) {
+    animation-delay: -8s;
+    }
+    
+    
+    @keyframes wave {
+    0% {
+    left: 155%;
+    }
+    100% {
+    left: -155%;
+    }
+    }
+    
+    
+    @keyframes boat {
+    0% {
+    bottom: 5%;
+    }
+    100% {
+    bottom: 15%;
+    }
+    }
+    
+    
+    
+    
+    
+    
+    * {
+    box-sizing: border-box;
+    }
+    .quote {
+    color: #fff;
+    font-size: 20px;
+    font-family: 'open sans', sans-serif;
+    width: 400px;
+    background: skyblue;
+    border-radius: 30px;
+    position: relative;
+    transform: translateX(50%);
+    
+    
+    height: auto;
+    padding: 20px 30px;
+     
+    
+    }
+    .quote2 {
+    color: #fff;
+    
+    
+    font-size: 20px;
+    font-family: 'open sans', sans-serif;
+    width: 400px;
+    background: #b8540d;
+    border-radius: 30px;
+    position: relative;
+    transform: translateX(-50%);
+    
+    
+    height: auto;
+    padding: 20px 30px;
+    margin-left: -200px;
+    
+    
+    }
+    .quote:before {
+    content: '';
+    background: inherit;
+    z-index: -1;
+    position: absolute;
+    height: 13%;
+    color: #000;
+    width: 13%;
+    bottom: 45%;
+    left: -13%;
+    border-bottom-left-radius: 60% 100%;
+    border-bottom-right-radius: 0;
+    transform: rotate(-10deg);
+    
+    
+    }
+    
+    
+    .quote:after {
+    transform: translateX(-50%);
+    
+    
+    content: ''; color: #000;
+    
+    
+    z-index: -2;
+    position: absolute;
+    height: 16%;
+    width: 16%;
+    bottom: 80%;
+    left: -13%;
+    transform: rotate(-25deg);
+    border-bottom-left-radius: 60% 100%;
+    border-bottom-right-radius: 0;
+    
+    
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    .quote2:before {
+    content: '';
+    background: inherit;
+    z-index: -1;
+    position: absolute;
+    height: 13%;
+    color: #fff;
+    
+    
+    width: 13%;
+    bottom: 45%;
+    right: -13%;
+    border-top-right-radius: 60% 100%;
+    border-top-left-radius: 0;
+    }
+    
+    
+    .quote2:after {
+    content: '';
+    color: #fff;
+    z-index: -2;
+    position: absolute;
+    height: 16%;
+    width: 16%;
+    top: 80%;
+    right: 56%;
+    transform: rotate(-105deg);
+    border-top-right-radius: 60% 100%;
+    border-top-left-radius: 0;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .boat3 {
+    position: fixed;
+    left: 70%;
+    animation: boat 8s linear alternate infinite;
+    animation-delay: -.66s;
+    }
+    
+    
+    .boat3 .hull {
+    position: relative;
+    height: 0em;
+    width: 14em;
+    border-bottom: 5em solid #2D7D47;
+    background: #2D7D47;
+    border-radius: 0 0 28em 28em;
+    }
+    
+    
+    .boat3 .hull::after {
+    content: 'SS GREEN';
+    display: block;
+    color: #f2edea;
+    padding-left: 1em;
+    padding-top: 1em;
+    font-size: 10px;
+    opacity: .5;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    }
+    
+    
+    
+    
+    .character {
+    position: absolute;
+    bottom: 4em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 100px;
+    }
+    
+    
+    .head {
+    width: 60px;
+    height: 60px;
+    background: #ffd1a1;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    }
+    
+    
+    .eye {
+    width: 15px;
+    height: 15px;
+    background: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    }
+    
+    
+    .left-eye {
+    left: 10px;
+    }
+    
+    
+    .right-eye {
+    right: 10px;
+    }
+    
+    
+    .tear {
+    width: 6px;
+    height: 10px;
+    background: #00f;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: crying 1s infinite;
+    }
+    
+    
+    .body {
+    width: 40px;
+    height: 40px;
+    background: #ffe0b3;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    
+    
+    .leg {
+    width: 15px;
+    height: 40px;
+    background: #ffe0b3;
+    position: absolute;
+    bottom: 0;
+    }
+    
+    
+    .left-leg {
+    left: 5px;
+    }
+    
+    
+    .right-leg {
+    right: 5px;
+    }
+    
+    
+    @keyframes crying {
+    0% {
+    opacity: 0;
+    }
+    50% {
+    opacity: 1;
+    bottom: -8px;
+    }
+    100% {
+    opacity: 0;
+    bottom: -10px;
+    }
+    }
+    
+    
+    .arm {
+    width: 10px;
+    height: 50px;
+    background: #ffe0b3;
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    }
+    
+    
+    .left-arm {
+    left: 0;
+    transform-origin: top right;
+    transform: rotate(30deg);
+    animation: panicLeftArm 1s ease-in-out infinite alternate;
+    }
+    
+    
+    .right-arm {
+    right: 0;
+    transform-origin: top left;
+    transform: rotate(-30deg);
+    animation: panicRightArm 1s ease-in-out infinite alternate;
+    }
+    
+    
+    @keyframes panicLeftArm {
+    0% {
+    transform: rotate(120deg);
+    }
+    100% {
+    transform: rotate(50deg);
+    }
+    }
+    
+    
+    @keyframes panicRightArm {
+    0% {
+    transform: rotate(-120deg);
+    }
+    100% {
+    transform: rotate(-50deg);
+    }
+    }
+    .hair {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background: #663300;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    top: 0;
+    left: 0;
+    }
+    
+    
+    .scientist {
+    position: absolute;
+    bottom: 4em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 140px;
+    }
+    
+    
+    .scientist-head {
+    width: 60px;
+    height: 60px;
+    background: #ffd1a1;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    top: 10px;
+    }
+    
+    
+    .scientist-eye {
+    width: 15px;
+    height: 15px;
+    background: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    }
+    
+    
+    .scientist-left-eye {
+    left: 10px;
+    }
+    
+    
+    .scientist-right-eye {
+    right: 10px;
+    }
+    
+    
+    .scientist-body {
+    width: 50px;
+    height: 50px;
+    background: #fff; /* color of the lab coat */
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    
+    
+    /* .scientist-leg {
+    width: 15px;
+    height: 40px;
+    background: #ffe0b3;
+    position: absolute;
+    top: 120px;
+    } */
+    
+    
+    .scientist-left-leg {
+    left: 5px;
+    }
+    
+    
+    .scientist-right-leg {
+    right: 5px;
+    }
+    
+    
+    .scientist-arm {
+    width: 15px;
+    height: 50px;
+    background: #fff;
+    position: absolute;
+    top: 75px;
+    
+    
+    
+    
+    }
+    
+    
+    .scientist-left-arm {
+    left: 0;
+    }
+    
+    
+    @keyframes waveHello {
+    0%, 100% {
+    transform: rotate(-90deg);
+    }
+    50% {
+    transform: rotate(-85deg);
+    }
+    }
+    
+    
+    .scientist-right-arm {
+    right: 0;
+    transform-origin: top left;
+    transform: rotate(-90deg);
+    
+    
+    animation: waveHello 1s infinite;
+    }
+    
+    
+    
+    
+    .crazy-hair {
+    position: absolute;
+    width: 70px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50% 50% 0 0;
+    top: -10px;
+    left: -5px;
+    }
+    
+    
+    
+    
+    
+    
+    .scientist-tie {
+    width: 10px;
+    height: 20px;
+    background: black;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    }
+    
+    
+    .scientist-tie-knot {
+    width: 12px;
+    height: 12px;
+    background: black;
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 50%;
+    }
+    
+    
+    .crazy-hair {
+    height: 25px;
+    background: #fff;
+    }
+    
+    
+    
+    
+    
+    
+    .exclamation-point {
+    width: 30vmin;
+    height: 30vmin;
+    line-height: 30vmin;
+    text-align: center;
+    font-size: 20vmin;
+    animation: point-anim 10s linear forwards;
+    }
+    @keyframes point-anim {
+    2%, 4%, 6%, 8%, 10%, 12%, 14%, 16%, 18%, 20%,
+    22%, 24%, 26%, 28%, 30%, 32%, 34%, 36%, 38%, 40%,
+    42%, 44%, 46%, 48%, 50%, 52%, 54%, 56%, 58%, 60%,
+    62%, 64%, 66%, 68%, 70%, 72%, 74%, 76%, 78%, 80%,
+    82%, 84%, 86%, 88%, 90%, 92%, 94%, 96%, 98% {
+    transform: rotateZ(5deg);
+    color: red;
+    opacity: 1;
+    }
+    1%, 3%, 5%, 7%, 9%, 11%, 13%, 15%, 17%, 19%,
+    21%, 23%, 25%, 27%, 29%, 31%, 33%, 35%, 37%, 39%,
+    41%, 43%, 45%, 47%, 49%, 51%, 53%, 55%, 57%, 59%,
+    61%, 63%, 65%, 67%, 69%, 71%, 73%, 75%, 77%, 79%,
+    81%, 83%, 85%, 87%, 89%, 91%, 93%, 95%, 97%, 99% {
+    transform: rotateZ(-5deg);
+    color: red;
+    opacity: 1;
+    }
+    100% {
+    transform: rotateZ(0deg);
+    opacity: 0;
+    }
+    }
+    
+    
+    
+    
+    :root {
+    --green: red;
+    --orange: #fe9c14;
+    --text-color: #5A5959;
+    --gray: #555;
+    --main-font: 'Quicksand', sans-serif;
+    }
+    
+    
+    .co2-guage_flag {
+    fill: var(--green);
+    }
+    
+    
+    .co2-guage_bg,
+    .co2-guage_arrow {
+    fill: var(--orange);
+    }
+    
+    
+    .co2-guage_label {
+    opacity: 0;
+    }
+    
+    
+    .co2-guage_text {
+    font-family: var(--main-font);
+    font-size: 70px;
+    fill: var(--gray);
+    }
+    
+    
+    *, *:after, *:before {
+    box-sizing: inherit;
+    }
+    
+    
+    html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    }
+    
+    
+    body {
+    font-size: 2.4rem;
+    line-height: 1.3;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    }
+    
+    
+    .container {
+    width: 100%;
+    padding: 30px;
+    transform: rotate(-90deg);
+    margin-left: -100px;
+    }
+    
+    
+    .co2-guage {
+    display: none;
+    
+    
+    }
+    
+    
+    
+ 
+ 
+    .boat-exit-left {
+        transform: translateX(-100vw);  
+        transition: transform 1s ease-out; 
+    }
+
+    
+ 
+
+#start-journey-prompt {
+    background-color: #fff;  
+    border: 3px solid #00aaff;  
+    border-radius: 15px;  
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);  
+    width: 300px;  
+    text-align: center; 
+
+    margin-top: -200px;
+}
+
+#start-journey-prompt p {
+    font-size: 20px;
+    margin-bottom: 15px;  
+    color: #333;  
+}
+
+#start-journey-btn {
+    background-color: #00aaff; 
+    color: #fff;  
+    padding: 10px 20px;  
+    border: none;
+    border-radius: 8px;  
+    cursor: pointer;  
+    font-size: 18px;  
+    transition: 0.3s;  
+}
+
+#start-journey-btn:hover {
+    background-color: #0077cc; 
+}
