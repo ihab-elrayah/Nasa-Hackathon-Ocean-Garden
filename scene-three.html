@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="scene-three.css">
+    <link rel="stylesheet" href="Component/water-scene.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Wave Animation</title>
+</head>
+
+<body>
+    <!-- Bubbles -->
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
+
+    <!-- Clouds -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+
+    <div class="waves-back">
+        <div class="wave-back"></div>
+        <div class="wave-back"></div>
+        <div class="wave-back"></div>
+        <div class="wave-back"></div>
+        <div class="wave-back"></div>
+    </div>
+
+
+
+    <div  id="start-journey-prompt" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <p>Would you like to start this journey?</p>
+        <button id="start-journey-btn">Yes</button>
+    </div>
+    
+    
+    <div class="boat2 ">
+     
+       
+        <div class="container">
+            
+            <svg id="co2guage" class="co2-guage" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1103.65 172.39">
+                      <defs>
+                        <style>.a{fill:none;}.c{clip-path:url(#a);}.d{fill:#bbb;}.f,.g{isolation:isolate;}</style>
+                        <clipPath id="a"><path class="a" d="M1051.59,83.39H42.34v0.09a44.49,44.49,0,0,0,0,88.81v0.09H55.43V137.72h7.49v34.67H166.08V137.72h7.51v34.67H276.72V137.72h7.49v34.67H387.37V137.72h7.49v34.67H498V137.72h7.49v34.67H608.66V137.72h7.49v34.67H719.3V137.72h7.49v34.67H829.95V137.72h7.49v34.67H940.59V137.72h7.49v34.67h103.51v-89Z"/></clipPath>
+                      </defs>
+                      <title>c-o-2 guage</title>
+                        <polygon class="co2-guage_flag" points="1103.65 0 1057.73 0 1057.73 0.01 1055.71 0.01 1055.71 83.39 1053.57 83.39 1053.57 172.39 1064.25 172.39 1064.25 83.39 1059.75 83.39 1059.75 33.6 1103.65 33.6 1103.65 33.56 1087.15 16.73 1103.65 0.06 1103.65 0"/>
+                      <g class="c">
+                        <rect class="co2-guage_bg" y="83.39" width="1051.59" height="89"/>
+                        <rect id="guageFill" class="d co2-guage_fill" y="83.39" width="1051.59" height="89"/>
+                      </g>
+                      <g id="guageLabel" class="f co2-guage_label">
+                        <polygon id="guageArrow" class="e co2-guage_arrow" points="71.83 64.35 59.95 80.59 48.07 64.35 71.83 64.35"/>
+                        <text id="guageText" class="g co2-guage_text" text-anchor="middle" transform="translate(48.07 56.72)">800 Pounds</text></g>
+                    </svg>
+              </div>
+              
+        <div class="scientist">
+            <div class="scientist-head">
+                <div class="scientist-tie-knot"></div>
+                <div class="scientist-tie"></div>
+            
+                <div class="scientist-eye scientist-left-eye"></div>
+                <div class="scientist-eye scientist-right-eye"></div>
+                <div class="crazy-hair"></div>
+            </div>
+            <div class="scientist-body"></div>
+            <div class="scientist-arm scientist-left-arm">
+             </div>
+            <div class="scientist-arm scientist-right-arm">
+             </div>
+            <div class="scientist-leg scientist-left-leg"></div>
+            <div class="scientist-leg scientist-right-leg"></div>
+        </div>
+        
+        <div class="mast">
+            <div class="sail"></div>
+            <div class="flag">
+                <div class="skull">
+                    <div class="eyes">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                    </div>
+                    <div class="teeth">
+                        <div class="tooth"></div>
+                        <div class="tooth"></div>
+                        <div class="tooth"></div>
+
+                       
+                        
+                    </div>
+                </div>
+                <div id="scientist-quote" class="quote"style="display: none;">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="hull"></div>
+        
+    </div>
+    
+
+    <div class="boat3">
+       
+       
+        <div id="character-quote" class="quote2" style="display: none;">
+            <p></p>
+        </div>
+       
+       
+        <div class="exclamation-point">!</div>
+
+          
+          
+          
+
+
+     <div class="character">
+
+
+
+        
+        <div class="head">
+            <div class="eye left-eye">
+                <div class="tear"></div>
+            </div>
+            <div class="eye right-eye">
+                <div class="tear"></div>
+            </div>
+        </div>
+        <div class="body"></div>
+        <div class="arm left-arm"></div>
+        <div class="hair"></div>
+
+        <!-- Right Arm -->
+        <div class="arm right-arm"></div>
+        <div class="leg left-leg"></div>
+        <div class="leg right-leg"></div>
+    </div>
+    
+        <div class="mast">
+            <div class="sail"></div>
+            <div class="flag">
+                <div class="skull">
+                    <div class="eyes">
+                        <div class="eye"></div>
+                        <div class="eye"></div>
+                    </div>
+                    <div class="teeth">
+                        <div class="tooth"></div>
+                        <div class="tooth"></div>
+                        <div class="tooth"></div>
+
+
+                       
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hull"></div>
+    </div>
+    
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+    
+    
+    <div class="waves">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    
+     
+
+    <!-- Factories -->
+    <div class="factory factory1"></div>
+    <div class="factory factory2"></div>
+
+    <!-- Smoke -->
+    <div class="smoke smoke1"></div>
+    <div class="smoke smoke2"></div>
+
+     <!-- <img src="img/Dr.png" alt="Dr" class="dr-on-boat"> -->
+
+     
+
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+
+       
+     <div class="sun"></div>
+
+    
+
+     <!-- <img src="img/sad.png" alt="Sad" class="sad-on-raft"> -->
+ </body>
+ <script src="scene-three.js"></script>
+ 
+</html>
