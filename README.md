@@ -5,6 +5,7 @@
 
 Welcome to our project repository for the Ocean-Garden challenge at the NASA Space Apps Hackathon. Fueled by ambition and purpose, we aimed to weave an interactive web narrative emphasizing the profound significance of phytoplankton within our marine ecosystem.
 
+![NASA](https://github.com/ihab-elrayah/Nasa-Hackathon-Ocean-Garden/assets/127975319/08007d09-ba9c-4f64-a767-a79609fd9e22)
 
  <img width="1434" alt="Screenshot 2023-10-16 at 5 45 01 PM" src="https://github.com/MoeDevs1/Nasa-Hackathon-Ocean-Garden/assets/120997135/d92fc328-7f10-4878-bf88-c9e627ce019b">
 
